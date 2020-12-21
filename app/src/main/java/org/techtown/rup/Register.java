@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -25,6 +26,7 @@ public class Register extends AppCompatActivity {
     private Spinner spinner;
     Button registerBtn;
     String id_d,pw_d,email_d;
+    EditText phone;
 
 
     @Override
@@ -36,8 +38,7 @@ public class Register extends AppCompatActivity {
         id=(EditText)findViewById(R.id.idtext);
         pw=(EditText)findViewById(R.id.pwtext);
         email=(EditText)findViewById(R.id.emailtext);
-
-
+        phone=(EditText)findViewById(R.id.phonetext);
 
 
 
@@ -49,7 +50,7 @@ public class Register extends AppCompatActivity {
                 id_d=id.getText().toString();
                 pw_d=pw.getText().toString();
                 email_d=email.getText().toString();
-
+                phone.addTextChangedListener(new PhoneNumberFormattingTextWatcher());//전화번호에 하이픈 자동추가
 
 
 

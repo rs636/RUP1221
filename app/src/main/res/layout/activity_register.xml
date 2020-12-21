@@ -23,77 +23,140 @@
             android:textColor="#000000"
             android:textSize="20dp"
             android:textStyle="bold" />
-
-
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <EditText
-            android:inputType="textPassword"
-            android:layout_width="280dp"
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="아이디"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
-            android:id="@+id/idtext"
-            android:drawableStart="@drawable/id_image"
-            android:drawableLeft="@drawable/id_image"
-            android:layout_marginTop="30dp"
-            android:background="@color/colorPrimary"/>
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/idtext"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:drawableStart="@drawable/id_image"
+                android:drawableLeft="@drawable/id_image"
+                android:hint="아이디"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
+
+            <Button
+                android:id="@+id/chk_idtext"
+                android:layout_width="53dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/idtext"
+                android:text="아이디   중복 체크"
+                android:textSize="7dp" />
+        </RelativeLayout>
+
         <EditText
-            android:inputType="textPassword"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:hint="비밀번호"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
             android:id="@+id/pwtext"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
             android:drawableStart="@drawable/pw_image"
             android:drawableLeft="@drawable/pw_image"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+        <EditText
+            android:id="@+id/nametext"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:background="@color/colorPrimary"/>
+            android:background="@color/colorPrimary"
+            android:drawableStart="@drawable/pw_image"
+            android:drawableLeft="@drawable/pw_image"
+            android:hint="성명"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
         <EditText
             android:id="@+id/emailtext"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
-            android:hint="e-mail"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:drawableStart="@drawable/email"
+            android:drawableLeft="@drawable/email"
+            android:hint="e-mail"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+        <EditText
+            android:id="@+id/phonetext"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:drawableStart="@drawable/email"
+            android:drawableLeft="@drawable/email"
+            android:hint="휴대폰 번호"
             android:padding="10dp"
             android:textColor="#000000"
             android:textColorHint="#000000"
-            android:drawableStart="@drawable/email"
-            android:drawableLeft="@drawable/email"
+            android:maxLength="13"/>
+        <RelativeLayout
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:background="@color/colorPrimary"/>
+            >
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:text="SMS수신동의"
+                android:drawableStart="@drawable/email"
+                android:drawableLeft="@drawable/email"
+                android:textColor="#000000"
+
+                android:background="@color/colorPrimary"/>
+        </RelativeLayout>
         <RadioGroup
+            android:id="@+id/gender_group"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
-            android:id="@+id/gender_group"
             android:layout_gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
             <RadioButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="여성"
                 android:id="@+id/gender_woman"
-                android:layout_weight="1"
-                android:checked="true"/>
-            <RadioButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="남성"
-                android:id="@+id/gender_men"
                 android:layout_weight="1"
-                android:checked="false"/>
+                android:checked="true"
+                android:text="여성" />
+
+            <RadioButton
+                android:id="@+id/gender_men"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="남성" />
 
         </RadioGroup>
+
         <Spinner
             android:id="@+id/majorspinner"
             android:layout_width="280dp"
@@ -105,16 +168,16 @@
 
         <Button
 
+            android:id="@+id/registerbtn"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:textColor="#ffffff"
-            android:background="@color/colorPrimaryDark"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryDark"
             android:text="가입하기"
-            android:id="@+id/registerbtn"/>
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 </LinearLayout>
