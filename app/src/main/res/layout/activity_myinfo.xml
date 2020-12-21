@@ -7,15 +7,50 @@
     tools:context=".MyinfoActivity"
     android:id="@+id/myinfoFrame"
     android:background="#E4D6AB">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:layout_gravity="center"
-        android:text="개인정보변경화면"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="설정" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/system_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="시스템/보안"
+            android:textSize="30dp"
+            />
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/system_1"
+            android:text="개인정보 수정"
+            android:gravity="center_vertical"
+            android:background="#ECE39C" />
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_1"
+            android:text="공지사항"
+            android:gravity="center_vertical"
+            android:background="#ECE39C"
+            />
+        <Button
+            android:id="@+id/btn_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_2"
+            android:text="고객센터"
+            android:gravity="center_vertical"
+            android:background="#ECE39C"
+            />
+        <Button
+            android:id="@+id/btn_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_3"
+            android:text="도움말"
+            android:gravity="center_vertical"
+            android:background="#ECE39C"
+            />
+    </RelativeLayout>
 </FrameLayout>
