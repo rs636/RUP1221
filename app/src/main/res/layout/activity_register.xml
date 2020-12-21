@@ -57,7 +57,9 @@
                 android:layout_marginTop="25dp"
                 android:layout_toRightOf="@+id/idtext"
                 android:text="아이디   중복 체크"
-                android:textSize="7dp" />
+                android:textStyle="bold"
+                android:textSize="7dp"
+                />
         </RelativeLayout>
 
         <EditText
@@ -81,8 +83,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
-            android:drawableStart="@drawable/pw_image"
-            android:drawableLeft="@drawable/pw_image"
+            android:drawableStart="@drawable/name_image"
+            android:drawableLeft="@drawable/name_image"
             android:hint="성명"
             android:inputType="textPassword"
             android:padding="10dp"
@@ -108,8 +110,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
-            android:drawableStart="@drawable/email"
-            android:drawableLeft="@drawable/email"
+            android:drawableStart="@drawable/phone_image"
+            android:drawableLeft="@drawable/phone_image"
             android:hint="휴대폰 번호"
             android:padding="10dp"
             android:textColor="#000000"
@@ -117,45 +119,42 @@
             android:maxLength="13"/>
         <RelativeLayout
             android:layout_width="280dp"
-            android:layout_height="50dp"
+            android:layout_height="42dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             >
             <TextView
-                android:layout_width="150dp"
+                android:id="@+id/smstext"
+                android:layout_width="140dp"
                 android:layout_height="match_parent"
                 android:text="SMS수신동의"
-                android:drawableStart="@drawable/email"
-                android:drawableLeft="@drawable/email"
+                android:padding="10dp"
+                android:drawableStart="@drawable/sms_chk_image"
+                android:drawableLeft="@drawable/sms_chk_image"
                 android:textColor="#000000"
-
+                android:textSize="16dp"
+                android:gravity="center_vertical"
                 android:background="@color/colorPrimary"/>
-        </RelativeLayout>
         <RadioGroup
-            android:id="@+id/gender_group"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
+            android:layout_toRightOf="@id/smstext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical">
             <RadioButton
-                android:id="@+id/gender_woman"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:checked="true"
-                android:text="여성" />
-
+                android:text="동의"/>
             <RadioButton
-                android:id="@+id/gender_men"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:checked="false"
-                android:text="남성" />
-
+                android:text="거부"/>
         </RadioGroup>
+        </RelativeLayout>
 
         <Spinner
             android:id="@+id/majorspinner"
