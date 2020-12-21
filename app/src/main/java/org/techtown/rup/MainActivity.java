@@ -37,8 +37,63 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         scanCode();
-
     }
+
+    private void point_plant(){
+
+        if(point<=100){
+            plant.setImageResource(R.drawable.plant1);
+        }
+        else if(point>100&&point<=150){
+            plant.setImageResource(R.drawable.plant2);
+        }
+        else if(point>150&&point<=200){
+            plant.setImageResource(R.drawable.plant3);
+        }
+        else if(point>200&&point<=250){
+            plant.setImageResource(R.drawable.plant4);
+        }
+        else if(point>250&&point<=300){
+            plant.setImageResource(R.drawable.plant5);
+        }
+        else if(point>300&&point<=350){
+            plant.setImageResource(R.drawable.plant6);
+        }
+        else if(point>350&&point<=400){
+            plant.setImageResource(R.drawable.plant7);
+        }
+        else if(point>400&&point<=450){
+            plant.setImageResource(R.drawable.plant8);
+        }
+        else if(point>450&&point<=500){
+            plant.setImageResource(R.drawable.plant9);
+        }
+        else if(point>500&&point<=550){
+            plant.setImageResource(R.drawable.plant10);
+        }
+        else if(point>600&&point<=650){
+            plant.setImageResource(R.drawable.plant10_1);
+        }
+        else if(point>650&&point<=700){
+            plant.setImageResource(R.drawable.plant11);
+        }
+        else if(point>700&&point<=750){
+            plant.setImageResource(R.drawable.plant12);
+        }
+        else if(point>750&&point<=800){
+            plant.setImageResource(R.drawable.plant13);
+        }
+        else if(point>800&&point<=850){
+            plant.setImageResource(R.drawable.plant14);
+        }
+        else if(point>850&&point<=900){
+            plant.setImageResource(R.drawable.plant15);
+        }
+        else{
+            plant.setImageResource(R.drawable.plant16);
+        }
+    }
+
     private void scanCode(){
         IntentIntegrator integrator=new IntentIntegrator(this);
         integrator.setCaptureActivity(CaptureAct.class);
@@ -62,15 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     int pointRandom=(int)(Math.random()*99)+1;
                     builder.setMessage(pointRandom+"이 지급되었습니다.");
                     point+=pointRandom;
-                    if(point<=100){
-                        plant.setImageResource(R.drawable.seed);
-                    }
-                    else if(point>100&&point<=150){
-                        plant.setImageResource(R.drawable.plant);
-                    }
-                    else if(point>150&&point<=500){
-                        plant.setImageResource(R.drawable.flower);
-                    }
+                    point_plant();
                     pointTxt.setText(""+point);
 
                 builder.setTitle("포인트를 적립하였습니다.");
@@ -126,18 +173,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String pointS=pointTxt.getText().toString();
         point=Integer.parseInt(pointS);
 
-        if(point<=100){
-            plant.setImageResource(R.drawable.seed);
-        }
-        else if(point>100&&point<=150){
-            plant.setImageResource(R.drawable.plant);
-        }
-        else if(point>150&&point<=500){
-            plant.setImageResource(R.drawable.flower);
-        }
-
-
-
+        point_plant();
 
         //QR시스템을 안드로이드 폰이 없어서 다른 방법으로 확인하기 위해서
         point_btn.setOnClickListener(new View.OnClickListener() {
@@ -145,15 +181,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View view) {
                 point+=1;
                 pointTxt.setText(""+point);
-                if(point<=100){
-                    plant.setImageResource(R.drawable.seed);
-                }
-                else if(point>100&&point<=150){
-                    plant.setImageResource(R.drawable.plant);
-                }
-                else if(point>150&&point<=500){
-                    plant.setImageResource(R.drawable.flower);
-                }
+                point_plant();
 
             }
         });
