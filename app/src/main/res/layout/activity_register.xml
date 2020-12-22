@@ -58,6 +58,7 @@
                 />
         </RelativeLayout>
 
+        
         <EditText
             android:id="@+id/pwtext"
             android:layout_width="280dp"
