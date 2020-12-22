@@ -1,5 +1,6 @@
 package org.techtown.rup;
 
+import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -42,15 +43,11 @@ public class Register extends AppCompatActivity {
         phone=(EditText)findViewById(R.id.phonetext);
         sms_agree=(RadioButton)findViewById(R.id.sms_agree);
         sms_disagree=(RadioButton)findViewById(R.id.sms_disagree);
-//        sms_agree.setOnClickListener(radioButtonClickListener);
-//        sms_disagree.setOnClickListener(radioButtonClickListener);
-//
-//        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-//        radioGroup.setOnCheckedChangeListener(radioGroupButtonChangeListener);
-//
-//        RadioButton.OnClickListener radioButtonClickListener=new RadioButton.OnClickListener(){
-//
-//        }
+        sms_agree.setOnClickListener(radioButtonClickListener);
+        sms_disagree.setOnClickListener(radioButtonClickListener);
+
+        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+        radioGroup.setOnCheckedChangeListener(radioGroupButtonChangeListener);
 
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
@@ -67,4 +64,20 @@ public class Register extends AppCompatActivity {
         });
 
     }
+    RadioButton.OnClickListener radioButtonClickListener=new RadioButton.OnClickListener(){
+        @Override
+        public void onClick(View v) {
+
+        }
+    };
+    RadioGroup.OnCheckedChangeListener radioGroupButtonChangeListener = new RadioGroup.OnCheckedChangeListener() {
+        @Override public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
+            if(i == R.id.sms_agree){
+
+            }
+            else if(i == R.id.sms_disagree){
+
+            }
+        }
+    };
 }
