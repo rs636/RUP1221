@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import java.lang.reflect.Array;
@@ -19,9 +20,9 @@ public class Register extends AppCompatActivity {
 
     private static String IP_ADDRESS="172.0.0.1";
     private static String TAG="phptest";
-
+    private RadioButton sms_agree,sms_disagree;
+    private RadioGroup radioGroup;
     private EditText id,pw,email;
-    private RadioButton gender;
     private ArrayAdapter adapter;
     private Spinner spinner;
     Button registerBtn;
@@ -39,7 +40,17 @@ public class Register extends AppCompatActivity {
         pw=(EditText)findViewById(R.id.pwtext);
         email=(EditText)findViewById(R.id.emailtext);
         phone=(EditText)findViewById(R.id.phonetext);
-
+        sms_agree=(RadioButton)findViewById(R.id.sms_agree);
+        sms_disagree=(RadioButton)findViewById(R.id.sms_disagree);
+//        sms_agree.setOnClickListener(radioButtonClickListener);
+//        sms_disagree.setOnClickListener(radioButtonClickListener);
+//
+//        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+//        radioGroup.setOnCheckedChangeListener(radioGroupButtonChangeListener);
+//
+//        RadioButton.OnClickListener radioButtonClickListener=new RadioButton.OnClickListener(){
+//
+//        }
 
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
@@ -52,14 +63,8 @@ public class Register extends AppCompatActivity {
                 email_d=email.getText().toString();
                 phone.addTextChangedListener(new PhoneNumberFormattingTextWatcher());//전화번호에 하이픈 자동추가
 
-
-
             }
         });
-
-        spinner=(Spinner)findViewById(R.id.majorspinner);
-        adapter= ArrayAdapter.createFromResource(this,R.array.major, android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
 
     }
 }
