@@ -29,18 +29,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
+            android:layout_width="280dp"
+            android:layout_height="42dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp">
             <EditText
                 android:id="@+id/idtext"
-                android:layout_width="230dp"
+<<<<<<< HEAD
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="65dp"
+                android:layout_marginLeft="51dp"
                 android:layout_marginTop="30dp"
+=======
+                android:layout_width="230dp"
+                android:layout_height="match_parent"
+>>>>>>> 632a74670ca95818cfad2953728235f7bb4de59f
                 android:background="@color/colorPrimary"
                 android:drawableStart="@drawable/id_image"
                 android:drawableLeft="@drawable/id_image"
@@ -49,22 +54,24 @@
                 android:padding="10dp"
                 android:textColor="#000000"
                 android:textColorHint="#000000" />
-
             <Button
                 android:id="@+id/chk_idtext"
-                android:layout_width="53dp"
-                android:layout_height="55dp"
-                android:layout_marginTop="25dp"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
                 android:layout_toRightOf="@+id/idtext"
+<<<<<<< HEAD
                 android:text="아이디   중복 체크"
+=======
+                android:text="아이디 중복 체크"
                 android:textStyle="bold"
+>>>>>>> 632a74670ca95818cfad2953728235f7bb4de59f
                 android:textSize="7dp"
-                />
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <EditText
             android:id="@+id/pwtext"
-            android:layout_width="280dp"
+            android:layout_width="310dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
@@ -76,9 +83,10 @@
             android:padding="10dp"
             android:textColor="#000000"
             android:textColorHint="#000000" />
+
         <EditText
             android:id="@+id/nametext"
-            android:layout_width="280dp"
+            android:layout_width="310dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
@@ -90,9 +98,10 @@
             android:padding="10dp"
             android:textColor="#000000"
             android:textColorHint="#000000" />
+
         <EditText
             android:id="@+id/emailtext"
-            android:layout_width="280dp"
+            android:layout_width="310dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
@@ -103,9 +112,10 @@
             android:padding="10dp"
             android:textColor="#000000"
             android:textColorHint="#000000" />
+
         <EditText
             android:id="@+id/phonetext"
-            android:layout_width="280dp"
+            android:layout_width="310dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
@@ -113,124 +123,248 @@
             android:drawableStart="@drawable/phone_image"
             android:drawableLeft="@drawable/phone_image"
             android:hint="휴대폰 번호"
+            android:maxLength="13"
             android:padding="10dp"
             android:textColor="#000000"
-            android:textColorHint="#000000"
-            android:maxLength="13"/>
+            android:textColorHint="#000000" />
+
         <RelativeLayout
-            android:layout_width="280dp"
+            android:layout_width="310dp"
             android:layout_height="42dp"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            >
+            android:layout_marginTop="10dp">
+
             <TextView
                 android:id="@+id/smstext"
                 android:layout_width="140dp"
                 android:layout_height="match_parent"
-                android:text="SMS수신동의"
-                android:padding="10dp"
+                android:background="@color/colorPrimary"
                 android:drawableStart="@drawable/sms_chk_image"
                 android:drawableLeft="@drawable/sms_chk_image"
-                android:textColor="#000000"
-                android:textSize="16dp"
                 android:gravity="center_vertical"
+<<<<<<< HEAD
+                android:padding="10dp"
+                android:text="SMS수신동의"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/smstext"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/sms_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="동의" />
+
+                <RadioButton
+                    android:id="@+id/sms_disagree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="거부" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="310dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="생년월일"
+                android:textColor="#000000"
+                android:textSize="17dp"
+                android:background="@color/colorPrimary"
+                android:drawableStart="@drawable/ic_baseline_cake_24"
+                android:drawableLeft="@drawable/ic_baseline_cake_24">
+            </TextView>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="310dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+=======
                 android:background="@color/colorPrimary"/>
         <RadioGroup
             android:layout_toRightOf="@id/smstext"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+            android:id="@+id/radioGroup"
             android:layout_gravity="center_vertical">
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:id="@+id/sms_agree"
                 android:layout_weight="1"
                 android:checked="true"
                 android:text="동의"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:id="@+id/sms_disagree"
                 android:layout_weight="1"
                 android:checked="false"
                 android:text="거부"/>
         </RadioGroup>
         </RelativeLayout>
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="280dp"
-            android:layout_height="50dp"
+            android:layout_height="42dp"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorPrimary"
-            android:orientation="horizontal">
+            android:layout_marginTop="10dp">
 
+            <TextView
+                android:id="@+id/birth_screen"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:drawableStart="@drawable/birth_image"
+                android:drawableLeft="@drawable/birth_image"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="생일 입력"
+                android:textColor="#000000"
+                android:textSize="16dp" />
 
+>>>>>>> 632a74670ca95818cfad2953728235f7bb4de59f
+            <LinearLayout
+                android:layout_toRightOf="@+id/birth_screen"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2.6">
-
+<<<<<<< HEAD
+                android:layout_weight="1.6">
+=======
+                android:layout_weight="2.5">
+>>>>>>> 632a74670ca95818cfad2953728235f7bb4de59f
                 <Spinner
-                    android:id="@+id/birth_spinner"
+                    android:id="@+id/spinner_year"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="3">
+                    android:layout_weight="1.5"
+                    android:spinnerMode="dropdown">
                 </Spinner>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="년"
-                    android:textSize="20dp"
-                    android:textColor="#000000">
+                    android:textColor="#000000"
+                    android:textSize="20dp">
                 </TextView>
             </LinearLayout>
 
+<<<<<<< HEAD
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
-
+                android:layout_weight="1.3">
                 <Spinner
+                    android:id="@+id/spinner_month"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:spinnerMode="dropdown">
                 </Spinner>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="월"
-                    android:textSize="20dp"
-                    android:textColor="#000000">
-                </TextView>
+                    android:textColor="#000000"
+                    android:textSize="20dp"></TextView>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1.3">
                 <Spinner
+                    android:id="@+id/spinner_day"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown">
                 </Spinner>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="일"
-                    android:textSize="20dp"
-                    android:textColor="#000000">
-                </TextView>
+                    android:textColor="#000000"
+                    android:textSize="20dp"></TextView>
             </LinearLayout>
-
-
         </LinearLayout>
+=======
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                    </Spinner>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="월"
+                        android:textSize="20dp"
+                        android:textColor="#000000">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                    </Spinner>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="일"
+                        android:textSize="20dp"
+                        android:textColor="#000000">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+>>>>>>> 632a74670ca95818cfad2953728235f7bb4de59f
 
         <Button
-
             android:id="@+id/registerbtn"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
